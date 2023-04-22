@@ -97,8 +97,13 @@ setup(
     author_email="736946693@qq.com",
     description="This is a project template.",
     long_description=long_description,
-    url="",
-    packages=find_packages(),
+
+    #存放源码的地址，填入gitee的源码网址即可
+    #url="",
+
+    long_description=long_description,
+    #README.md文本的格式，如果希望使用markdown语言就需要下面这句话
+    long_description_content_type="text/markdown",
 
     # 安装过程中，需要安装的静态文件，如配置文件、service文件、图片等
     # data_files=[
