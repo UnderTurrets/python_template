@@ -47,7 +47,7 @@ setup(
     #https://pypi.org/search/?q=&o=&c=Topic+%3A%3A+Software+Development+%3A%3A+Build+Tools
     classifiers=[
         # 属于什么类型
-        "Topic :: Software Development :: Build Tools",
+        "Topic :: Software Development :: Libraries :: Python Modules",
 
         # 发展时期,常见的如下
         # Development Status:: 1 - Planning
