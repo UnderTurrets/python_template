@@ -1,13 +1,10 @@
 from setuptools import setup, find_packages
 from os import path
-import glob
 
 this_directory = path.abspath(path.dirname(__file__))
 with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
     my_long_description = f.read()
 
-# 使用 glob 模块列出所有图片文件
-# image_files = glob.glob('res/imgRes/*.jpg')
 
 setup(
     # 关于classifiers的描述详见如下
