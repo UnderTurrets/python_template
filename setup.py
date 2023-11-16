@@ -1,15 +1,20 @@
 from setuptools import setup, find_packages
 from os import path
+import glob
 
 this_directory = path.abspath(path.dirname(__file__))
 with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
     my_long_description = f.read()
+
+# 使用 glob 模块列出所有图片文件
+# image_files = glob.glob('res/imgRes/*.jpg')
+
 setup(
     # 关于classifiers的描述详见如下
     # https://pypi.org/search/?q=&o=&c=Topic+%3A%3A+Software+Development+%3A%3A+Build+Tools
     classifiers=[
         # 属于什么类型
-        "Topic :: Software Development :: Build Tools",
+        "Topic :: Software Development :: Libraries :: Python Modules",
 
         # 发展时期,常见的如下
         # Development Status:: 1 - Planning
@@ -37,18 +42,17 @@ setup(
         "Programming Language :: Python :: 3.3",
         "Programming Language :: Python :: 3.4",
         "Programming Language :: Python :: 3.5",
-        "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
 
         # 运行的操作系统
-        # "Operating System :: POSIX :: Linux"
-        "Operating System :: Microsoft :: Windows :: Windows 11"
+        # "Operating System :: POSIX :: Linux",
+        "Operating System :: Microsoft :: Windows",
 
         # 运行的环境
-        # "Environment :: GPU :: NVIDIA CUDA :: 12"
+        # "Environment :: GPU :: NVIDIA CUDA :: 12",
 
         # 开发的目标用户
         # Intended Audience :: Customer Service
@@ -61,8 +65,8 @@ setup(
         "Intended Audience :: End Users/Desktop",
 
         # 自然语言
-        # "Natural Language :: English"
-        "Natural Language :: Chinese (Simplified)"
+        "Natural Language :: English",
+        "Natural Language :: Chinese (Simplified)",
 
     ],
 
@@ -75,7 +79,7 @@ setup(
     long_description=my_long_description,
 
     # 存放源码的地址，填入gitee的源码网址即可
-    # url="",
+    # url="https://gitee.com/UnderTurrets/",
 
     packages=find_packages(),
 
@@ -84,8 +88,8 @@ setup(
 
     # 安装过程中，需要安装的静态文件，如配置文件、service文件、图片等
     # data_files=[
-    #     ("", ["conf/*.conf"]),
-    #     ("/usr/lib/systemd/system/", ["bin/*.service"]),
+    #      ("", ["conf/*.conf"]),
+    #      ("/usr/lib/systemd/system", ["bin/*.service"]),
     #            ],
 
     # 希望被打包的文件
@@ -100,7 +104,7 @@ setup(
     #            },
 
     # 表明当前模块依赖哪些包，若环境中没有，则会从pypi中下载安装
-    # install_requires=["","",""],
+    # install_requires=["requests",],
 
     # setup.py 本身要依赖的包，这通常是为一些setuptools的插件准备的配置
     # 这里列出的包，不会自动安装。
@@ -109,12 +113,6 @@ setup(
     # 仅在测试时需要使用的依赖，在正常发布的代码中是没有用的。
     # 在执行python setup.py test时，可以自动安装这三个库，确保测试的正常运行。
     # tests_require=[
-    #     "",
-    # ],
-
-    # 用于安装setup_requires或tests_require里的软件包
-    # 这些信息会写入egg的 metadata 信息中
-    # dependency_links=[
     #     "",
     # ],
 
