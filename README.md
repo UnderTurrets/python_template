@@ -33,7 +33,41 @@ pip install twine -i https://pypi.tuna.tsinghua.edu.cn/simple
 ##  2.1 项目文件树
 - 你的项目可能是这样的...
 
-![在这里插入图片描述](res/READMEimgRes/d919d615def3466f9ff73488c4e62aac.png)
+```powershell
+xu736946693@ubuntu:~/Desktop/python-template$ tree
+.
+├── bin
+│   └── start.py
+├── conf
+│   └── yourfile.conf
+├── dataBase
+│   └── yourDB
+├── docs
+│   └── introduction.md
+├── lib
+│   └── yourlib.py
+├── LICENSE
+├── log
+│   └── version.md
+├── package_name
+│   ├── __init__.py
+│   └── module1
+│       └── __init__.py
+├── README.md
+├── res
+│   ├── READMEimgRes
+│   │   ├── 7ac23192b1904eb790272d8462cec5b8.png
+│   │   └── d919d615def3466f9ff73488c4e62aac.png
+│   └── yourResource
+│       └── resourceFile
+├── settings.zip
+├── setup.py
+└── tests
+    └── test.py
+
+12 directories, 16 files
+
+```
 
 ##  2.2 编写setup.py文件
 setup.py文件是用来打包和上传你的包的重要文件，它有固定的编写范式。下面我将给出我的demo并附上详细注释。
@@ -171,10 +205,53 @@ setup(
 python setup.py sdist bdist_wheel
 ```
 
-- 可以看到项目文件树变成了这样
+- 可以看到项目下会自动生成build目录和lib目录等：
 
-![在这里插入图片描述](res/READMEimgRes/7ac23192b1904eb790272d8462cec5b8.png)
+```powershell
+xu736946693@ubuntu:~/Desktop/python-template$ tree -L 3
+.
+├── bin
+│   └── start.py
+├── build
+│   ├── bdist.linux-x86_64
+│   └── lib
+│       └── package_name
+├── conf
+│   └── yourfile.conf
+├── dataBase
+│   └── yourDB
+├── dist
+│   ├── projectTemplate-1.0.0-py3-none-any.whl
+│   └── projectTemplate-1.0.0.tar.gz
+├── docs
+│   └── introduction.md
+├── lib
+│   └── yourlib.py
+├── LICENSE
+├── log
+│   └── version.md
+├── package_name
+│   ├── __init__.py
+│   └── module1
+│       └── __init__.py
+├── projectTemplate.egg-info
+│   ├── dependency_links.txt
+│   ├── PKG-INFO
+│   ├── SOURCES.txt
+│   └── top_level.txt
+├── README.md
+├── res
+│   ├── READMEimgRes
+│   │   ├── 7ac23192b1904eb790272d8462cec5b8.png
+│   │   └── d919d615def3466f9ff73488c4e62aac.png
+│   └── yourResource
+│       └── resourceFile
+├── settings.zip
+├── setup.py
+└── tests
+    └── test.py
 
+```
 #  4.上传
 - 在项目空间下执行如下指令：
 ```shell
