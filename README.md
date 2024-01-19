@@ -263,3 +263,19 @@ twine upload -u <the usrname of your PyPI account> -p <the password of your PyPI
 - **你的软件包名字是PyPI用以区分的唯一标识，因此必须全球唯一**
 
 如果上传时出现ERROR：The user 'XXX' isn't allowed to upload to project ''，换个名字，长一点无所谓，不能跟别人重复。
+
+##  2024.1.19更新：
+目前PyPI官方强制要求两步验证，同时关闭了在终端中输入账密上传包的方式。目前需要在账户中设置API才可以上传。
+
+1. 设置API
+
+![在这里插入图片描述](imgResREADME/4c06da57a7b245349764944246d0f823.png)
+
+
+2. 在家目录建立`.pypirc`文件。对于windows用户，即`'C:\Users\<Your name>\.pypirc`。对于Linux用户，即`'~\.pypirc`。
+3. twine上传
+
+```powershell
+twine upload dist/*
+```
+
