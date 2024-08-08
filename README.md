@@ -269,7 +269,7 @@ twine upload -u <the usrname of your PyPI account> -p <the password of your PyPI
 
 1. 设置API
 
-![在这里插入图片描述](imgResREADME/4c06da57a7b245349764944246d0f823.png)
+![在这里插入图片描述](assets/4c06da57a7b245349764944246d0f823.png)
 
 
 2. 在家目录建立`.pypirc`文件。对于windows用户，即`'C:\Users\<Your name>\.pypirc`。对于Linux用户，即`'~\.pypirc`。
